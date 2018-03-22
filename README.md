@@ -10,12 +10,12 @@ A Binary Decision Diagram (BDD) is a data structure that is used to represent a 
 + DOT (graph description language) for visualization of the BDDs
 
 ## Installation
-At first, clone or download this project. Afterwards, go to the terminal and type `make` to compile and link this application. Finally, type `./ibdd` to test an example.
-
-**Note**: There are also unit tests and benchmarks. To checkout the unit tests, type `git checkout test` in your terminal. To get the benchmarks, type `git checkout benchmark`. For more information, see their *README*.
+At first, clone or download this project. Afterwards, go to the terminal and type `make` to compile and link this application. Finally, type `./ibdd_test` to test the quality of this application.
 
 ## Usage
-At first, include and initialize the manager with the commands `include "manager.hpp"` and `Manager manager(4, 521, 521)`. The first parameter stands for the supported variables and the next parameters for the sizes regarding the hash table and cache. It is recommended to use prime numbers because of using a modulo process for the generation of keys. For creating  single nodes, use the command `BDDNode a( manager.createVariable(1) )`. In this context, there are many overloaded operators which deal with the manipulation of Boolean functions, e. g. `BDDNode g = !a` stands for a negation. For more information, look at the class `BDDNode`. For getting information about nodes, use the output operator `std::cout << a;` and to visualize nodes, use the command `manager.printNode(a, "a", file)`. Finally, the command `manager.clear()` executes a manual garbage collection.
+Catch2 is used for the unit tests. Catch2 is a multi-paradigm test framework for C++. To define single tests, the BDD-style is used. This became such a useful way of working that first class support has been added to Catch. Scenarios are specified using SCENARIO, GIVEN, WHEN and THEN macros, which map on to TEST_CASEs and SECTIONs, respectively. For more information about this, look at the file `ibddTest.cpp`.
+
+**Note**: To see more detailed output compared to `installation`, just type `./ibdd_test` with parameters like `-r xml`.
 
 ## More information
 Generate the documentation regarding the special comments with a command in your terminal, for example:
