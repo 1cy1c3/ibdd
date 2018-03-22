@@ -1,0 +1,13 @@
+MODULE c17
+INPUT
+	1gat,2gat,3gat,6gat,7gat;
+OUTPUT  
+	22gat,23gat;
+STRUCTURE
+	10gat = nand(1gat, 3gat);
+	11gat = nand(3gat, 6gat);
+	16gat = nand(2gat, 11gat);
+	19gat = nand(11gat, 7gat);
+	22gat = nand(10gat, 16gat);
+	23gat = nand(16gat, 19gat);
+ENDMODULE

@@ -1,6 +1,6 @@
 CPP		= $(wildcard *.cpp)
 OBJECT	= $(addsuffix .o, $(basename $(CPP) ) )
-PROG	= ibdd_test
+PROG	= ibdd_benchmark
 OUT		= /bin/echo
 CC		= g++ -std=c++11
 FLAGS	= -g -Wall

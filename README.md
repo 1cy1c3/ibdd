@@ -10,12 +10,30 @@ A Binary Decision Diagram (BDD) is a data structure that is used to represent a 
 + DOT (graph description language) for visualization of the BDDs
 
 ## Installation
-At first, clone or download this project. Afterwards, go to the terminal and type `make` to compile and link this application. Finally, type `./ibdd_test` to test the quality of this application.
+At first, clone or download this project. Afterwards, go to the terminal and type `make` to compile and link this application. Finally, type `./ibdd_benchmark` to test the power of this application.
 
 ## Usage
-Catch2 is used for the unit tests. Catch2 is a multi-paradigm test framework for C++. To define single tests, the BDD-style is used. This became such a useful way of working that first class support has been added to Catch. Scenarios are specified using SCENARIO, GIVEN, WHEN and THEN macros, which map on to TEST_CASEs and SECTIONs, respectively. For more information about this, look at the file `ibddTest.cpp`.
+To build BDDs from circuits, there is a folder named *trace* with different circuit descriptions. In this context, just type the following command in your terminal to read in a circuit:
 
-**Note**: To see more detailed output compared to `installation`, just type `./ibdd_test` with parameters like `-r xml`.
+```
+$ ./ibdd_benchmark trace/c17.trace
+AGRABDD Package: Version 1.0 (March 18, 2018)
+Number of inputs: 5
+...
+Time in seconds: 0.00
+```
+
+Afterwards, you will see different information like number of inputs, memory usage and so on regarding the used circuit. The circuits have the following meaning:
+
+* C17: Freely invented circuit
+* C432: 27-channel interrupt controller
+* C499/C1355: 32-bit SEC circuit
+* C880: 8-Bit ALU
+* C1908: 16-bit SEC/DED circuit
+* C2670: 12-bit ALU and controller
+* C3540: 8-bit ALU with BCD arithmetic
+* C5315: 9-bit ALU with parity computing
+* C6288-X: X-bit multiplier
 
 ## More information
 Generate the documentation regarding the special comments with a command in your terminal, for example:

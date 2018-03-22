@@ -413,7 +413,7 @@ void Manager::showInfo(const double comparedTime, std::vector<BDDNode>& bddNodes
     struct rusage r_usage;
     getrusage(RUSAGE_SELF, &r_usage);
     int bddNodeCount = 0;
-    std::for_each(bddNodes.rbegin(), bddNodes.rend(), [&bddNodeCount](BDDNode bddNode) { bddNodeCount += bddNode.countNodes(); });
+    std::for_each(variableCounter.rbegin(), variableCounter.rend(), [&bddNodeCount](BDDNode bddNode) { bddNodeCount += bddNode.countNodes(); });
     std::cout << "Nodes count: " << bddNodeCount << std::endl;
     std::cout << "Time in seconds: " << comparedTime << std::endl;
     std::cout << "Memory usage: " << r_usage.ru_maxrss << std::endl;
