@@ -43,4 +43,4 @@ $ cd ibdd
 $ doxygen doxygen.config
 ```
 
-Afterwards, you will get a website with helpful information about the code. Furthermore, read the more detailed [documentation](https://runekrauss.com/pdf/ibdd.pdf) about this application.
+Afterwards, you will get a website with helpful information about the code. Furthermore, read the more detailed [documentation](https://runekrauss.com/files/papers/ibdd.pdf) about this application.
